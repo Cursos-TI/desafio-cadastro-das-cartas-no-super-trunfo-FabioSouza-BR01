@@ -10,8 +10,8 @@ int main() {
     float PIB1, PIB2;
     float Densidade_populacional1, Densidade_populacional2;
     float Pib_per_capita1, Pib_per_capita2;
-
-  
+    float Super_Poder1, Super_Poder2;
+      
 
     printf ("Carta 1\n");
     printf ("\n");
@@ -41,7 +41,7 @@ int main() {
 
     Densidade_populacional1 = (Populacao1 / Area1); 
     Pib_per_capita1 = (PIB1 * 1000000000)  / (Populacao1);
-    
+    Super_Poder1 = (float)(Populacao1+Area1+PIB1+Num_Pontos_Turisticos1+Pib_per_capita1+(1/Densidade_populacional1));
 
     printf("CARTA 1:\n");
     printf("Estado: %s\n", Estado1);
@@ -53,6 +53,7 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", Num_Pontos_Turisticos1);
     printf("Densidade Populacional: %.2f hab/km\n", Densidade_populacional1);
     printf("PIB per capita: %.2f\n", Pib_per_capita1);
+    printf("Super Poder: %d\n", (int)Super_Poder1);
     printf ("\n");
 
 
@@ -83,6 +84,7 @@ int main() {
 
     Densidade_populacional2 = Populacao2 / Area2;
     Pib_per_capita2 = (PIB2 * 1000000000)  / (Populacao2);
+    Super_Poder2 = (float)(Populacao2+Area2+PIB2+Num_Pontos_Turisticos2+Pib_per_capita2+(1/Densidade_populacional2));
 
     printf("CARTA 2:\n");
     printf("Estado: %s\n", Estado2);
@@ -94,6 +96,23 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", Num_Pontos_Turisticos2);
     printf("Densidade Populacional: %.2f\n", Densidade_populacional2);
     printf("PIB per capita %.2f\n", Pib_per_capita2);
+    printf("Super Poder: %d\n", (int)Super_Poder2);
+
+    printf ("\n");
+    printf ("\n");
+
+
+
+    printf("Comparacao de Cartas\n");
+    printf("Resultado 1 carta 1 venceu, 0 carta 2 venceu\n");
+    printf ("\n");
+    printf("População: %d\n", (int)Populacao1 > Populacao2);
+    printf("Área (km²): %d\n", (int)Area1 > Area2);
+    printf("PIB: %d\n", (int)PIB1 > PIB2);
+    printf("Número de Pontos Turísticos: %d\n", Num_Pontos_Turisticos1 > Num_Pontos_Turisticos2);
+    printf("Densidade Populacional: %d\n", (int)Densidade_populacional1 < Densidade_populacional2);
+    printf("PIB per capita %d\n", (int)Pib_per_capita1 > Pib_per_capita2);
+    printf("Super Poder: %d\n", (int) Super_Poder1 > Super_Poder2);
     
     return 0;
 }
