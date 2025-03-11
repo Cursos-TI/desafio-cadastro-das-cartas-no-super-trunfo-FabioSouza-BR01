@@ -101,18 +101,16 @@ int main() {
     printf ("\n");
     printf ("\n");
 
+    printf("Comparacao de Cartas\nPontos Turísticos\n");
+    printf("Carta 1 - Campinas: 50\n");
+    printf("Carta 2 - limeira: 30\n");
 
-
-    printf("Comparacao de Cartas\n");
-    printf("Resultado 1 carta 1 venceu, 0 carta 2 venceu\n");
-    printf ("\n");
-    printf("População: %d\n", (int)Populacao1 > Populacao2);
-    printf("Área (km²): %d\n", (int)Area1 > Area2);
-    printf("PIB: %d\n", (int)PIB1 > PIB2);
-    printf("Número de Pontos Turísticos: %d\n", Num_Pontos_Turisticos1 > Num_Pontos_Turisticos2);
-    printf("Densidade Populacional: %d\n", (int)Densidade_populacional1 < Densidade_populacional2);
-    printf("PIB per capita %d\n", (int)Pib_per_capita1 > Pib_per_capita2);
-    printf("Super Poder: %d\n", (int) Super_Poder1 > Super_Poder2);
+    if (Num_Pontos_Turisticos1 > Num_Pontos_Turisticos2)
+        {
+            printf("Resultado: Carta 1 venceu\nParabéns\n");
+        } else {
+            printf("Resultado: Carta 2 venceu\nParabéns\n");
+        }
     
     return 0;
 }
